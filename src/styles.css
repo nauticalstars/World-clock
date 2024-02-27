@@ -1,11 +1,12 @@
 body {
   font-family: sans-serif;
   background-image: url(img/steampunk\ ancient\ background\ gear.png);
+  opacity: 0.6;
 }
 .container {
   max-width: 600px;
   margin: 0 auto;
-  background: white;
+  background: orange;
   border-radius: 6px;
   padding: 30px;
   box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.4);
@@ -25,4 +26,9 @@ h1 {
 }
 footer {
   text-align: center;
+  color: orange;
+}
+
+a {
+  color: red;
 }
