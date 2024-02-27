@@ -1,18 +1,9 @@
 body {
-  font-family: sans-serif;
+  font-family: "Cedarville Cursive", cursive;
+  font-style: normal;
   background-image: url(img/steampunk\ ancient\ background\ gear.png);
   opacity: 0.6;
 }
-.container {
-  max-width: 600px;
-  margin: 0 auto;
-  background: orange;
-  border-radius: 6px;
-  padding: 30px;
-  box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.4);
-  margin: 60px auto;
-}
-
 select {
   display: block;
   width: 100%;
@@ -24,11 +15,48 @@ h1 {
   text-align: center;
   font-size: 36px;
 }
+
+h2 {
+  margin: 0 0 10px;
+  font-size: 28px;
+}
 footer {
   text-align: center;
   color: orange;
+  font-family: sans-serif;
 }
-
 a {
   color: red;
+}
+
+.container {
+  max-width: 600px;
+  margin: 60px auto;
+  background: orange;
+  border-radius: 6px;
+  padding: 30px;
+  box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.4);
+}
+.city {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 0;
+  padding: 30px 2;
+  border-bottom: 1px dashed grey;
+}
+.city:last-child {
+  border: none;
+}
+
+.time {
+  font-size: 48px;
+  font-weight: bold;
+}
+
+.time small {
+  font-size: 18px;
+  vertical-align: middle;
+}
+.date {
+  opacity: 0.7;
 }
