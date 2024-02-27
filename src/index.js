@@ -3,7 +3,7 @@ function updateTime() {
   let squamishEl = document.querySelector("#squamish");
   let squamishDateEl = squamishEl.querySelector(".date");
   let squamishTimeEl = squamishEl.querySelector(".time");
-  let squamishTime = moment().tz("America / Vancouver");
+  let squamishTime = moment().tz("America/Vancouver");
   squamishDateEl.innerHTML = squamishTime.format("ddd MMM Do YYYY");
   squamishTimeEl.innerHTML = squamishTime.format(
     "h:mm:ss [<small>]A[</small>]"
@@ -33,5 +33,25 @@ function updateTime() {
   romeDateEl.innerHTML = romeTime.format("ddd MMM Do YYYY");
   romeTimeEl.innerHTML = romeTime.format("h:mm:ss [<small>]A[</small>]");
 }
+function updateCity(event) {
+  let cityTZ = event.target.value;
+  let cityName = cityTZ.split("/")[1];
+  let cityTime = moment().tz(cityTZ);
+  let citiesEl = document.querySelector("#cities");
+  citiesEl.innerHTML = `
+    <div class="city">
+      <div>
+        <h2>${cityName}</h2>
+        <div class="date">${cityTime.format("ddd MMM Do YYYY")} </div>
+      </div>
+      <div class="time">
+        ${cityTime.format("h:mm:ss [<small>]A[</small>]")}
+      </div>
+    </div>
+  `;
+}
 updateTime();
 setInterval(updateTime, 1000);
+
+let citiesSelectEl = document.querySelector("#city");
+citiesSelectEl.addEventListener("change", updateCity);
